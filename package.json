@@ -1,0 +1,8 @@
+{
+  "name": "oga-pay",
+  "version": "1.0.0",
+  "description": "Get paid in naira-priced invoices from any chain. NEAR Intents + NEAR AI Cloud. NEAR HACKATHON 2026, Real-World Money track.",
+  "license": "MIT",
+  "scripts": { "start": "node server.js", "demo": "MOCK=1 node server.js", "test": "node --test test/*.test.js" },
+  "engines": { "node": ">=18" }
+}

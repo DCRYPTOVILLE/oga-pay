@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oga Pay</title><link rel="stylesheet" href="/style.css"></head><body><div class="wrap">
+<header><div><h1>Oga Pay</h1><div class="mute" id="merchant"></div></div><span class="tag" id="mode"></span></header>
+
+<div class="card"><h2>1. Paste the customer's order message</h2>
+<textarea id="msg" placeholder="Paste a WhatsApp order here...">Hi, this is for Chidi Okafor
+2x HP EliteBook 840 G5 @ 450k
+1 Original 65W charger - 15,000
+Screen guard @ 3500</textarea>
+<div class="row" style="margin-top:10px"><button id="draftBtn">Let the AI draft the invoice</button></div>
+<div class="err" id="draftErr"></div></div>
+
+<div class="card" id="draftCard" style="display:none"><h2>2. Review and confirm</h2>
+<div class="mute" id="draftMeta"></div><table id="draftTable"></table>
+<div class="err" id="valErr"></div>
+<div class="row" style="margin-top:12px"><button id="createBtn">Create payment link</button></div></div>
+
+<div class="card"><h2>Invoices</h2><table id="list"></table></div>
+<p class="mute" style="font-size:13px">Customers pay with whatever they hold (USDC, ETH, SOL, BTC, NEAR...). You receive stablecoins on NEAR. No bank, no card, no chargebacks.</p>
+</div><script src="/dash.js"></script></body></html>

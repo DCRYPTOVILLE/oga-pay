@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pay invoice</title><link rel="stylesheet" href="/style.css"></head><body><div class="wrap">
+<header><div><h1 id="who">Pay invoice</h1><div class="mute" id="sub"></div></div><span class="tag" id="mode"></span></header>
+<div class="card"><div class="mute">Amount due</div><div class="big" id="ngn"></div><div class="mute" id="usd"></div>
+<table id="items" style="margin-top:10px"></table></div>
+
+<div class="card" id="choose"><h2>Pay with what you already hold</h2>
+<label>Asset and network</label><select id="asset"></select>
+<label>Your refund address on that network (used only if the payment fails)</label><input id="refund" placeholder="e.g. 0x... / your Solana address / bc1...">
+<div class="row" style="margin-top:12px"><button id="payBtn">Get payment details</button></div><div class="err" id="err"></div></div>
+
+<div class="card" id="pay" style="display:none"><div class="steps"><div class="step on" id="s1">1. Send</div><div class="step" id="s2">2. Swapping</div><div class="step" id="s3">3. Merchant paid</div></div>
+<div class="mute">Send exactly</div><div class="big" id="amt"></div><div class="mute" id="amtusd"></div>
+<label>to this address on <b id="chain"></b></label><div class="addr" id="addr"></div>
+<div class="row" style="margin-top:10px"><button class="ghost" id="copy">Copy address</button><button class="ghost" id="sim" style="display:none">Simulate my deposit (demo)</button></div>
+<div class="mute" id="memo" style="margin-top:8px"></div>
+<div class="mute" style="margin-top:8px;font-size:13px">Quote valid until <span id="dl"></span>. If the swap fails, funds are refunded to your refund address automatically. Powered by NEAR Intents.</div>
+<div id="state" style="margin-top:10px"></div></div>
+
+<div class="card" id="paid" style="display:none"><h2 class="ok">Payment received \u2713</h2><div class="mute">The merchant has been paid in <span id="settle"></span>.</div><p><a id="rc" href="#">View receipt</a></p></div>
+</div><script src="/pay.js"></script></body></html>
